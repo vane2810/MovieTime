@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MovieTime.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,8 @@ namespace MovieTime.Data
         {
 
         }
+        public DbSet<Series> Series { get; set; }
+        
+        public DbSet<Peliculas> Peliculas { get; set; }
     }
 }
