@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieTime.Models
 {
-    public class Peliculas
+    public class Novedades
     {
         public int Id { get; set; }
 
@@ -17,6 +17,5 @@ namespace MovieTime.Models
         public string? Genero { get; set; }
 
         public decimal Precio { get; set; }
-
     }
 }

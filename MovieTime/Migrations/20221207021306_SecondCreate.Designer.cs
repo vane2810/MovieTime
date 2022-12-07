@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieTime.Data;
 
 namespace MovieTime.Migrations
 {
     [DbContext(typeof(MovieTimeContext))]
-    partial class MovieTimeContextModelSnapshot : ModelSnapshot
+    [Migration("20221207021306_SecondCreate")]
+    partial class SecondCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,30 +43,6 @@ namespace MovieTime.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Documentales");
-                });
-
-            modelBuilder.Entity("MovieTime.Models.Novedades", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Genero")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Titulo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Novedades");
                 });
 
             modelBuilder.Entity("MovieTime.Models.Peliculas", b =>

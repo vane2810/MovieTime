@@ -18,5 +18,9 @@ namespace MovieTime.Data
         public DbSet<Peliculas> Peliculas { get; set; }
 
         public DbSet<Documentales> Documentales { get; set; }
+
+        public DbSet<Trailers> Trailers { get; set; }
+
+        public DbSet<Novedades> Novedades { get; set; }
     }
 }
