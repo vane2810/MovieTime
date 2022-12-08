@@ -3,8 +3,8 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
+div class="text-center">
+<h1>¡Disfruta de las mejores peliculas!</h1>
 
 
 <p>
@@ -19,6 +19,7 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
+                        <img src="~/img/img-imagen1.jpg" class="card-img-top" alt="...">
                         <h5 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h5>
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Fecha)</p>
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Genero)</p>
@@ -30,7 +31,7 @@
                         </p>
                     </div>
                 </div>
-            </div>            
+            </div>
         }
     </div>
 
