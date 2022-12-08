@@ -10,6 +10,7 @@ a.navbar-brand {
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
+  background-color: #000000
 }
 
 .btn-primary {
@@ -60,6 +61,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
+
   margin-bottom: 60px;
  
 }
