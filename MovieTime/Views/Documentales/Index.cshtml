@@ -4,48 +4,76 @@
     ViewData["Title"] = "Documentales";
 }
 
-<h1>Index</h1> 
+
+<h1>Lo que deseas ver en un solo lugar</h1>
+<style>
+    body {
+        background-color: rgb(0, 0, 26);
+    }
+</style>
+<style>
+    h1 {
+        color: white;
+    }
+</style>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://youtu.be/1MFJaS6_ANQ" title="YouTube video" class="d-block w-150" ></iframe>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <iframe src="https://youtu.be/1NpYeHGWFs0" title="YouTube video" class="d-block w-150"></iframe>
+        </div>
+        <div class="carousel-item">
+            <iframe src="https://youtu.be/dwe06xjozJk" title="YouTube video" class="d-block w-150"></iframe>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 <p>
-     <a type="button" class="btn btn-primary" asp-action="Create">Agregar</a>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="~/img/img-documentales.jpg" class="card-img-top" alt="...">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h5>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Fecha)</p>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Genero)</p>
+                        <p>
+
+                            <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/img/edit.png" width="20" /></a> |
+                            <a asp-action="Details" asp-route-id="@item.Id"><img src="~/img/details.png" width="20" /></a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/img/delete.png" width="20" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fecha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Genero)
-            </th>
-           
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fecha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genero)
-            </td>
-            
-            <td>
 
-                <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/img/edit.png" width="20" /></a> |
-                <a asp-action="Details" asp-route-id="@item.Id"><img src="~/img/details.png" width="20" /></a> |
-                <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/img/delete.png" width="20" /></a>
 
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<p>
+    <a type="button" class="btn btn-primary" asp-action="Create">Agregar</a>
+</p>
+
+
