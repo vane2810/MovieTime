@@ -16,14 +16,14 @@
     }
 </style>
 
+<h1>¡Disfruta de las mejores peliculas!</h1>
+
 <div align:"center">
     <iframe width="1125" height="600" src="https://www.youtube.com/embed/w7KuQBcUh9k?start=56" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<h1>¡Disfruta de las mejores peliculas!</h1>
-
 <p>
-    <a type="button" class="btn btn-primary" asp-action="Create">Create New</a>
+    <a type="button" class="btn btn-primary" asp-action="Create">Agregar</a>
 </p>
      
 <p>
@@ -39,9 +39,11 @@
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Fecha)</p>
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Genero)</p>
                         <p>
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                            <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/img/edit.png" width="20" /></a> |
+                            <a asp-action="Details" asp-route-id="@item.Id"><img src="~/img/details.png" width="20" /></a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/img/delete.png" width="20" /></a>
+
                         </p>
                     </div>
                 </div>
