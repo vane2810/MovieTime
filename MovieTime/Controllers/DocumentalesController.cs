@@ -54,7 +54,7 @@ namespace MovieTime.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Titulo,Fecha,Genero,Precio")] Documentales documentales)
+        public async Task<IActionResult> Create([Bind("Id,Titulo,Fecha,Genero")] Documentales documentales)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MovieTime.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,Fecha,Genero,Precio")] Documentales documentales)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Titulo,Fecha,Genero")] Documentales documentales)
         {
             if (id != documentales.Id)
             {
