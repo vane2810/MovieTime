@@ -18,7 +18,5 @@ namespace MovieTime.Models
 
         public decimal Precio { get; set; }
 
-        public byte[] Imagen { get; set; }
-        [Required]
     }
 }
