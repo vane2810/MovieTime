@@ -10,7 +10,6 @@ a.navbar-brand {
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
-  background-color: #000000
 }
 
 .btn-primary {
@@ -55,6 +54,7 @@ button.accept-policy {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
+    
   position: relative;
   min-height: 100%;
 }

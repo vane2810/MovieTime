@@ -16,6 +16,6 @@ namespace MovieTime.Models
 
         public string? Genero { get; set; }
 
-        public decimal Precio { get; set; }
+        public  string? Parrafo { get; set; }
     }
 }
