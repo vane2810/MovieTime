@@ -18,9 +18,9 @@
         {
             <div class="col-4">
                 <div class="card">
-                    <img src="img/img-annabelle.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h5>
+                        <p class="img-fluid">@Html.DisplayFor(modelItem => item.Imagen)</p>
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Fecha)</p>
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Genero)</p>
                         <p class="card-text"><small class="text-muted">@Html.DisplayFor(modelItem => item.Precio)</small></p>
