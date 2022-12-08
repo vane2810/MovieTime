@@ -10,8 +10,8 @@ using MovieTime.Data;
 namespace MovieTime.Migrations
 {
     [DbContext(typeof(MovieTimeContext))]
-    [Migration("20221208211559_FourdCreate")]
-    partial class FourdCreate
+    [Migration("20221208104840_FiveCreate")]
+    partial class FiveCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
