@@ -15,8 +15,6 @@ namespace MovieTime.Models
             public DateTime Fecha { get; set; }
 
             public string? Genero { get; set; }
-
-            public decimal Precio { get; set; }
         
     }
 }
