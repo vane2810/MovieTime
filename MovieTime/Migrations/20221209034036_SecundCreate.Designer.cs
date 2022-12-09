@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieTime.Data;
 
 namespace MovieTime.Migrations
 {
     [DbContext(typeof(MovieTimeContext))]
-    partial class MovieTimeContextModelSnapshot : ModelSnapshot
+    [Migration("20221209034036_SecundCreate")]
+    partial class SecundCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
